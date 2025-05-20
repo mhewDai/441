@@ -1,0 +1,64 @@
+%--------------------
+% Packages
+% -------------------
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{gentium}
+\usepackage{mathptmx} % Use Times Font
+
+
+\usepackage[pdftex]{graphicx} % Required for including pictures
+\usepackage[pdftex,linkcolor=black,pdfborder={0 0 0},colorlinks]{hyperref} % Format links for pdf
+\usepackage{calc} % To reset the counter in the document after title page
+\usepackage{enumitem} % Includes lists
+\usepackage{booktabs}
+\frenchspacing % No double spacing between sentences
+\linespread{1.2} % Set linespace
+\usepackage[a4paper, lmargin=0.1666\paperwidth, rmargin=0.1666\paperwidth, tmargin=0.1111\paperheight, bmargin=0.1111\paperheight]{geometry} %margins
+%\usepackage{parskip}
+
+\usepackage[all]{nowidow} % Tries to remove widows
+\usepackage[protrusion=true,expansion=true]{microtype} % Improves typography, load after fontpackage is selected
+
+\author{ML for Text Mining}
+%-----------------------
+% Set pdf information and add title, fill in the fields
+%-----------------------
+\hypersetup{ 	
+pdfsubject = {},
+pdftitle = {},
+pdfauthor = {}
+}
+\input{sections/commands}
+\newif\ifsoln
+\solntrue
+\usepackage{color}
+\usepackage{environ}
+% SOLUTION environment
+\NewEnviron{soln}{
+\leavevmode\color{blue}\ignorespaces \textbf{Solution} \ifsoln
+\BODY \fi}{}
+\title{Graph Convolutional Networks}
+
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document} 
+\input{sections/preamble}
+
+% \input{sections/introduction}
+\input{sections/gcntheory}
+\input{sections/exploration}
+% \input{sections/gcn}
+\input{sections/nodeclass}
+\input{sections/linkpred}
+\input{sections/graphclassification}
+
+\newpage
+\clearpage
+
+\bibliographystyle{apalike}
+\bibliography{sections/main}
+\end{document}

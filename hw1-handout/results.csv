@@ -1,0 +1,5 @@
+Description,Training Time (s),Final Train Accuracy (%),Final Validation Accuracy (%),Final Test Accuracy (%)
+LSTM without Pre-trained Embeddings,109.40200400352478,99.3125,71.20536041259766,71.044921875
+LSTM with Pre-trained Embeddings,115.39570999145508,99.0625,81.69642639160156,80.76171875
+CNN without Pre-trained Embeddings,115.86541700363159,90.125,75.22321319580078,72.802734375
+CNN with Pre-trained Embeddings,114.85287714004517,99.6875,81.25,82.12890625

@@ -1,0 +1,41 @@
+\section{Graph classification}
+
+\subsection{Graph Statistics (\qgraphone)}
+\begin{soln}
+
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrr}
+\toprule
+Graph            & \mutag & \enzymes \\
+\midrule
+Num graphs & 141 & x \\
+Avg. num nodes        &  18.85 & x  \\
+Avg. num edges        &  94.04 & x  \\
+Node feature dim &  8 &  x \\
+\bottomrule
+\end{tabular}
+\caption{Graph statistics for the graph classification datasets}
+\label{tab:graphstat2}
+\end{table}
+\end{soln}
+
+\subsection{Implementation (\qgraphtwo)}
+\begin{soln}
+
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{@{}lrrr|rrr@{}}
+\toprule
+Graph               & \multicolumn{3}{c}{\mutag} & \multicolumn{3}{c}{\enzymes} \\ \midrule
+                    & P      & R         & F1    & P       & R       & F1       \\
+Mean-pooling        & x      & x   &       &    x     &    x     &         x \\
+Max-pooling         & 84    & 83    & 83        &    x     & x        &    x      \\
+Last-node pooling &    x    &   x        &x       &    x     &  x       &  x        \\ \bottomrule
+\end{tabular}
+\caption{Graph classification results. Please use macro-averages to report the precision, recall, and F1 score for \enzymes.}
+\label{tab:graphclass}
+\end{table}
+\end{soln}
